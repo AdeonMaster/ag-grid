@@ -177,6 +177,8 @@ export class AgGridReact extends Component<AgGridReactProps, {}> {
             } else if (this.isImmutableDataActive()) {
                 return ChangeDetectionStrategyType.IdentityCheck;
             }
+        } else if(propKey === 'doesExternalFilterPass' || propKey === 'isExternalFilterPresent') {
+            return ChangeDetectionStrategyType.IdentityCheck;
         }
 
         // all other cases will default to DeepValueCheck

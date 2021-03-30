@@ -154,6 +154,9 @@ var AgGridReact = /** @class */ (function (_super) {
                 return changeDetectionService_1.ChangeDetectionStrategyType.IdentityCheck;
             }
         }
+        else if (propKey === 'doesExternalFilterPass' || propKey === 'isExternalFilterPresent') {
+            return changeDetectionService_1.ChangeDetectionStrategyType.IdentityCheck;
+        }
         // all other cases will default to DeepValueCheck
         return changeDetectionService_1.ChangeDetectionStrategyType.DeepValueCheck;
     };
